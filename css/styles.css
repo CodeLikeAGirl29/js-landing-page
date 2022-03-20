@@ -13,9 +13,9 @@
 
 body {
     background: rgb(136, 203, 171);
-    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
+    background: linear-gradient( 0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
     margin: 0;
-    font-family: 'Merriweather', serif;
+    font-family: "Merriweather", serif;
     color: #fff;
 }
 
@@ -23,7 +23,7 @@ body {
 /* Typeography General*/
 
 h1 {
-    font-family: 'Fira Sans', sans-serif;
+    font-family: "Fira Sans", sans-serif;
     font-size: 3em;
     margin: 2em 1rem;
 }
@@ -37,7 +37,7 @@ h1 {
 
 h2 {
     border-bottom: 1px solid #cc1;
-    font-family: 'Oxygen', Sans-Serif;
+    font-family: "Oxygen", Sans-Serif;
     font-size: 3em;
     color: #fff;
 }
@@ -92,6 +92,11 @@ section {
     background: #333;
     color: #fff;
     transition: ease 0.3s all;
+}
+
+.navbar__menu .menu__link.active {
+    background: #333;
+    color: #fff;
 }
 
 
@@ -152,7 +157,7 @@ section:nth-of-type(even) .landing__container {
 /* Circles appear to be random do to use of :nth-of-type psuedo class */
 
 section:nth-of-type(odd) .landing__container::before {
-    content: '';
+    content: "";
     background: rgba(255, 255, 255, 0.187);
     position: absolute;
     z-index: -5;
@@ -164,9 +169,9 @@ section:nth-of-type(odd) .landing__container::before {
 }
 
 section:nth-of-type(even) .landing__container::before {
-    content: '';
+    content: "";
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    background: linear-gradient( 0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -179,9 +184,9 @@ section:nth-of-type(even) .landing__container::before {
 }
 
 section:nth-of-type(3n) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    background: linear-gradient( 0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -194,9 +199,9 @@ section:nth-of-type(3n) .landing__container::after {
 }
 
 section:nth-of-type(3n + 1) .landing__container::after {
-    content: '';
+    content: "";
     background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
+    background: linear-gradient( 0deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -219,7 +224,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 
 section.your-active-class {
     background: rgb(0, 0, 0);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient( 0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {
@@ -230,6 +235,19 @@ section.your-active-class .landing__container::before {
 section.your-active-class .landing__container::after {
     opacity: 1;
     animation: rotate 5s linear 0s infinite forwards reverse;
+}
+
+
+/* active styles */
+
+nav .container ul li.active {
+    background-color: #3b49df;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+nav .container ul li.active a {
+    color: #ffffff;
 }
 
 
@@ -245,15 +263,24 @@ section.your-active-class .landing__container::after {
 }
 
 
-/* Scroll to top styling */
+/* Scroll to top styles */
 
 .scrollToTopBtn {
+    display: none;
     position: fixed;
-    bottom: 25px;
-    right: 25px;
+    bottom: 20px;
+    right: 35px;
     z-index: 99;
-    border: 1px solid aqua;
+    border: none;
+    outline: none;
+    background-color: #333;
+    color: white;
     cursor: pointer;
-    padding: 0.1px;
-    border-radius: 25px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.scrollToTopBtn:hover {
+    background-color: #555;
 }

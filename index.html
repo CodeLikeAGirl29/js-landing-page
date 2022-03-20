@@ -1,4 +1,4 @@
-<!DOCTYPE >
+<!DOCTYPE>
 <html lang="en">
 
 <head>
@@ -14,11 +14,13 @@
 
 <body>
     <!-- HTML Follows BEM naming conventions 
-  IDs are only used for sections to connect menu achors to sections -->
+  IDs are only used for sections to connect menu anchors to sections -->
     <header class="page__header">
         <nav class="navbar__menu">
             <!-- Navigation starts as empty UL that will be populated with JS -->
-            <ul id="navbar__list"></ul>
+            <div class="container">
+                <ul id="navbar__list"></ul>
+            </div>
         </nav>
     </header>
     <main>
@@ -76,7 +78,8 @@
     </main>
     <footer class="page__footer">
         <p>&copy Udacity</p>
-        <button class="scrollToTopBtn"><img src="https://github.com/google/material-design-icons/blob/master/png/action/arrow_circle_up/materialiconsround/24dp/2x/round_arrow_circle_up_black_24dp.png?raw=true"></button>
+        <button class="scrollToTopBtn"><img
+                src="https://github.com/google/material-design-icons/blob/master/png/action/arrow_circle_up/materialiconsround/24dp/2x/round_arrow_circle_up_black_24dp.png?raw=true"></button>
     </footer>
     <script src="./js/app.js"></script>
 </body>
